@@ -26,6 +26,9 @@
   <build_export_depend>libfreetype6-dev</build_export_depend>
   <exec_depend>libfreetype6</exec_depend>
 
+  <build_depend>libfreeimage-dev</build_depend>
+  <exec_depend>libfreeimage-dev</exec_depend>
+
   <depend>libx11-dev</depend>
   <depend>libxaw</depend>
   <depend>libxrandr</depend>
