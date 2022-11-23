@@ -240,7 +240,9 @@ MeshResourceMarker::updateMaterialColor(const MarkerBase::MarkerConstSharedPtr &
   for (auto & material : this->materials_) {
     Ogre::Technique * technique = material->getTechnique(0);
     technique->setAmbient(r * 0.5f, g * 0.5f, b * 0.5f);
-    technique->setDiffuse(r, g, b, a);
+    if(!new_message->mesh_use_embedded_materials) {
+      technique->setDiffuse(r, g, b, a);
+    }
     technique->setSceneBlending(blending);
     technique->setDepthWriteEnabled(depth_write);
     technique->setLightingEnabled(true);
